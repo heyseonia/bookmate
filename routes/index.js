@@ -12,13 +12,21 @@ router.get('/login', function(req, res, next) {
 });
 
 /* signUp page */
-router.get('/signUp', function(req, res, next) {
-  res.render('index', { title: 'signUp', pageName: "auth/signUp.ejs" });
+router.get('/signup', function(req, res, next) {
+  res.render('index', { title: 'signup', pageName: "auth/signup.ejs" });
 });
 
-/* signUp page */
+/* myPage page */
 router.get('/mypage', function(req, res, next) {
-  res.render('index', { title: 'mypage', pageName: "auth/mypage.ejs" });
+    const isLogin = localStorage.getItem("bookmateIsLogin");
+    console.log(next);
+    if(isLogin){
+      res.render('index', { title: 'mypage', pageName: "auth/mypage.ejs" });
+    }else{
+      router.get('/login', function(req, res, next) {
+        res.render('index', { title: 'login', pageName: "auth/login.ejs" });
+      });
+    }
 });
 
 module.exports = router;

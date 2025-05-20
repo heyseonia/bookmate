@@ -4,7 +4,7 @@
         <nav>
             <ul>
                 <li><a href="/login">로그인</a></li>
-                <li><a href="/signUp">회원가입</a></li>
+                <li><a href="/signup">회원가입</a></li>
             </ul>
         </nav>
     </div>
@@ -15,7 +15,7 @@
     if(isLogin){
         const email = localStorage.getItem("bookmateIsEmail");
         document.querySelector('ul').innerHTML = `
-            <li><a href="/myPage">😀&nbsp;&nbsp;${email}&nbsp;님</a></li>
+            <li><a href="/mypage">😀&nbsp;&nbsp;${email}&nbsp;님</a></li>
             <li><a onclick="logout()">로그아웃</a></li>
         `;
         window.logout = () => {
@@ -27,7 +27,7 @@
     }else{
         document.querySelector('ul').innerHTML = `
             <li><a href="/login">로그인</a></li>
-            <li><a href="/signUp">회원가입</a></li>
+            <li><a href="/signup">회원가입</a></li>
         `;
     }
 </script>
