@@ -1,0 +1,8 @@
+# 환경 설정 파일 제외
+.env
+
+# npm 패키지 디렉터리 제외
+node_modules/
+
+# firebase
+public/javascripts/firebase.js

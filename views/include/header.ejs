@@ -1,0 +1,33 @@
+<header>
+    <div class="inner">
+        <h1><a href="/">Bookmate.</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/login">로그인</a></li>
+                <li><a href="/signUp">회원가입</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script type="module">
+    const isLogin = localStorage.getItem("bookmateIsLogin");
+    if(isLogin){
+        const email = localStorage.getItem("bookmateIsEmail");
+        document.querySelector('ul').innerHTML = `
+            <li><a href="/myPage">😀&nbsp;&nbsp;${email}&nbsp;님</a></li>
+            <li><a onclick="logout()">로그아웃</a></li>
+        `;
+        window.logout = () => {
+            localStorage.removeItem("bookmateIsLogin");
+            localStorage.removeItem("bookmateIsUid");
+            localStorage.removeItem("bookmateIsEmail");
+            window.location.href = "/";
+        }
+    }else{
+        document.querySelector('ul').innerHTML = `
+            <li><a href="/login">로그인</a></li>
+            <li><a href="/signUp">회원가입</a></li>
+        `;
+    }
+</script>

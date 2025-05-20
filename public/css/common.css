@@ -1,0 +1,39 @@
+/* header */
+.wrap header .inner{padding:30px 10px;display:flex;justify-content:space-between;align-items:center;}
+.wrap header h1{font-family:'SBAggroB';font-size:30px;}
+.wrap header ul{display:flex;}
+.wrap header ul li a{padding: 0 10px;}
+
+/* footer */
+.wrap footer p{padding:50px 0;text-align:center;font-size:14px;}
+
+/* common */
+.inner{width:1200px;margin:0 auto;}
+.container{width:1200px;min-height:600px;margin:50px auto 0;}
+.conBox{display:flex;flex-direction: column;align-items: center;justify-content:center;}
+/* text */
+.subTit{margin-bottom:10px;font-weight:600;font-size:27px}
+.subText{margin-bottom:20px;font-size:14px;}
+.conTit{margin-bottom:15px;font-weight:600;font-size:20px}
+.errorText{padding:5px;font-size:12px;color:#e60303;}
+/* input */
+input{width:240px;height:45px;border:1px solid #000;margin:5px;padding:5px;}
+/* button */
+.btn{width:240px;height:45px;margin:5px;border:1px solid #000;background:#000;color:#fff;}
+
+
+/* login */
+.loginForm{display:flex;flex-direction:column;}
+
+/* main */
+section{margin-bottom:50px;}
+.recruitCon ul{display:flex;flex-wrap:nowrap;justify-content:space-between;}
+.recruitCon ul li{width:24%;border-radius:10px;-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);}
+.recruitCon ul li:hover{-webkit-box-shadow:0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);box-shadow:0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);transition: 0.3s;}
+.recruitCon ul li a{display:block;background:#fff;border-radius:10px;overflow:hidden;}
+.recruitCon ul li a .conTop{width:100%;height:150px;overflow:hidden;}
+.recruitCon ul li a .conTop .thumbnail{width:100%;height:auto;transition: 0.3s;}
+.recruitCon ul li:hover a .conTop .thumbnail{transform:scale(1.1);transition: 0.3s;}
+.recruitCon ul li a .conBottom{width:100%;height:150px;padding:15px;}
+.recruitCon ul li a .conBottom .tit{margin-bottom:10px;font-size:16px;}
+.recruitCon ul li a .conBottom .txt{font-size:14px;}
